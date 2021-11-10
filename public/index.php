@@ -42,8 +42,8 @@ $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 
 $mapa = $contenedorDeRutas->getMap();
 //--Login-----------------------------------------------------------------------------------------------------------------
-$mapa->get('login', '/tambo/', ['controller'       => 'App\controllers\loginController', 'action'       => 'getlogin']);
-$mapa->get('home', '/tambo/home', ['controller'       => 'App\controllers\HomeController', 'action'       => 'getHome']);
+
+$mapa->get('home', '/sistematec/home', ['controller'       => 'App\controllers\HomeController', 'action'       => 'getHome']);
 
 //------Mach whit route-------------
 $matcher = $contenedorDeRutas->getMatcher();
