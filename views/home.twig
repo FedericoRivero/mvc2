@@ -1,7 +1,6 @@
-<h1>
-{{saludo}} 
-</h1>
-
-<h3>
-Dia {{fecha[0]}} Mes {{fecha[1]}} Año {{fecha[2]}}
-</h3>
+{% extends "padre.twig" %}
+{% block seccion %}
+  {% for alumno in listadoAlumnos %}
+     <br> {{alumno}}<br>
+  {% endfor %}
+{%endblock%}
