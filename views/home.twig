@@ -1,6 +1,23 @@
 {% extends "padre.twig" %}
-{% block seccion %}
-  {% for alumno in listadoAlumnos %}
-     <br> {{alumno}}<br>
-  {% endfor %}
-{%endblock%}
+
+{% block contenido %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+
+      <h5 class="text-fluid text-muted m-5" {# class="col-11 text-muted text-right" #}>
+        {% for skills in listSkills %}
+        <br> <i class="bi bi-file-earmark-code" style="background-color: #7175AA62; border-radius: 20%;"></i> {{skills}}<br>
+        {% endfor %}
+      </h5>
+
+    </div>
+
+    <div class="col-8">
+      <img class="img-fluid m-5" src="assets/undraw_progressive_app_m-9-ms.svg" alt="imagen svg"/>
+    </div>
+
+  </div>
+
+{% endblock %}

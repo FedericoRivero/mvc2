@@ -1,0 +1,29 @@
+{% extends "padre.twig" %}
+
+{% block contenido %}
+
+    <div class="container">
+        <div class="row">
+
+            <h1 class="col">
+                Usuario
+            </h1>
+
+            {% for usuario in usuarios %}
+
+                <div class="text-center col-12">
+                    <img src="{{usuario['imagen']}}" class="bd-placeholder-img rounded-circle img-fluid" alt="Imagen">
+
+                    <div class="center">
+                        <h2>{{usuario['nombre']}} {{usuario['apellido']}}</h2>
+                        <p>Email: {{usuario['email']}}</p>
+                        <p>Telefono: {{usuario['telefono']}}</p>
+                    </div>
+
+                </div>
+                
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

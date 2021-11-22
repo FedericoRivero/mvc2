@@ -1,3 +1,5 @@
+@import url('../Framework/bootstrap/css/bootstrap.min.css');
+
 @import url("componetes/boton.css");
 @import url("componetes/texto.css");
 @import url("componetes/cajas.css");

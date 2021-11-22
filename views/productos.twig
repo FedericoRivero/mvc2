@@ -1,0 +1,38 @@
+{% extends "padre.twig" %}
+
+{% block contenido %}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+
+            <h1 class="col">
+                Productos {{categoria}}
+            </h1>
+
+            <h3 class="col">
+                Nombre: {{productos_nombre}}
+            </h3>
+
+            <h3 class="col">
+                Código: {{productos}}
+            </h3>
+
+            <h3 class="col">
+                {% for precio in precios %}
+                $ {{precio}} <br>
+                {% endfor %}
+            </h3>
+
+
+            <h3 class="col">
+                Descripción: {{productos_descripcion}}
+            </h3>
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

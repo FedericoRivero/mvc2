@@ -9,10 +9,15 @@ class HomeController extends BaseController {
 	public function getHome()
     {
         //$fecha=explode(',',date('d,m,Y'));
-        $alumnos=array('Federico','Fernando','Ismael','Ruben','David','Emmanuel');
+        $skills=array('PHP','LARAVEL','MYSQL','HTML','CSS','JAVASCRIPT');
         //$fecha=new Fecha();
 
-        return $this->renderHTML('home.twig' , ['listadoAlumnos'=>$alumnos]);
+        return $this->renderHTML(
+            'home.twig',
+            [
+                'listSkills'=>$skills
+            ]
+        );
     }
 
     public function getAyuda()
@@ -20,7 +25,12 @@ class HomeController extends BaseController {
        // return view('home',[]);
         $nombre="ayuda";
 
-       return $this->renderHTML('ayuda.twig' , ["valor"=>$nombre]);
+       return $this->renderHTML(
+           'ayuda.twig',
+           [
+               "valor"=>$nombre
+            ]
+        );
     }
 }
 

@@ -42,8 +42,31 @@ $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 
 $mapa = $contenedorDeRutas->getMap();
 
-$mapa->get('home', '/mvc/', ['controller'=>'App\controllers\HomeController', 'action'=> 'getHome']);
-$mapa->get('ayuda','/mvc/ayuda',['controller'=>'App\controllers\HomeController','action'=> 'getAyuda'] );
+$mapa->get(
+	'home',
+	'/mvc2/',
+	['controller'=>'App\controllers\HomeController','action'=>'getHome']
+);
+$mapa->get(
+	'ayuda',
+	'/mvc2/ayuda',
+	['controller'=>'App\controllers\HomeController','action'=>'getAyuda']
+);
+$mapa->get(
+	'usuario',
+	'/mvc2/usuario',
+	['controller'=>'App\controllers\UsuarioController','action'=>'getUsuario']
+);
+$mapa->get(
+	'productos',
+	'/mvc2/productos',
+	['controller'=>'App\controllers\ProductosController','action'=>'getProductos']
+);
+$mapa->get(
+	'lista',
+	'/mvc2/lista',
+	['controller'=>'App\controllers\ListaController','action'=>'getLista']
+);
 
 //------Mach whit route-------------
 $matcher = $contenedorDeRutas->getMatcher();
