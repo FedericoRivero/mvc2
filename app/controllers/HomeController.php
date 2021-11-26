@@ -2,6 +2,7 @@
 
 namespace App\controllers;
 use App\controllers\BaseController;
+use App\models\Alumno;
 
 
 class HomeController extends BaseController {
@@ -32,6 +33,21 @@ class HomeController extends BaseController {
             ]
         );
     }
+
+
+    public function getAlumnos()
+    {
+        $alumnos=Alumno::all();
+
+        return $this->renderHTML(
+            'alumnos.twig',
+            [
+                'listadoAlumnos'=>$alumnos
+            ]
+        );
+        
+    }
+
 }
 
 ?>

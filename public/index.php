@@ -68,6 +68,12 @@ $mapa->get(
 	['controller'=>'App\controllers\ListaController','action'=>'getLista']
 );
 
+$mapa->get(
+	'Alumnos',
+	'/mvc2/alumnos',
+	['controller'=>'App\controllers\HomeController','action'=>'getAlumnos']
+);
+
 //------Mach whit route-------------
 $matcher = $contenedorDeRutas->getMatcher();
 
