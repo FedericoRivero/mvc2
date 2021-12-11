@@ -37,6 +37,8 @@ class HomeController extends BaseController {
 
     public function getAlumnos()
     {
+        // $alumnos=Alumno::where('id','>',0)->get();
+        
         $alumnos=Alumno::all();
 
         return $this->renderHTML(
@@ -45,9 +47,29 @@ class HomeController extends BaseController {
                 'listadoAlumnos'=>$alumnos
             ]
         );
-        
+
     }
 
+    public function storeAlumno($request)
+    {
+
+        $dato_post=$request->getParsedBody();
+
+        $nuevo_alumno=new Alumno();
+
+        $nuevo_alumno->nombre=$dato_post['nombre'];
+
+        $nuevo_alumno->save();
+
+        $alumnos=Alumno::all();
+
+        return $this->renderHTML(
+            'alumnos.twig',
+            [
+                'listadoAlumnos'=>$alumnos
+            ]
+        );
+    }
 }
 
 ?>

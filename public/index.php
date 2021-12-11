@@ -73,6 +73,11 @@ $mapa->get(
 	'/mvc2/alumnos',
 	['controller'=>'App\controllers\HomeController','action'=>'getAlumnos']
 );
+$mapa->post(
+	'home-store',
+	'/mvc2/alumnos',
+	['controller'=>'App\controllers\HomeController','action'=>'storeAlumno']
+);
 
 //------Mach whit route-------------
 $matcher = $contenedorDeRutas->getMatcher();
